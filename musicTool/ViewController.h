@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate>
+@interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate,NSSearchFieldDelegate>
 
 
 @end

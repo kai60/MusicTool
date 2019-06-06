@@ -706,14 +706,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="808" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="02T-NR-bYX">
-                                <rect key="frame" x="0.0" y="400" width="500" height="100"/>
+                                <rect key="frame" x="0.0" y="650" width="808" height="150"/>
                                 <subviews>
                                     <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tmL-EH-A8X">
-                                        <rect key="frame" x="98" y="57" width="304" height="24"/>
+                                        <rect key="frame" x="252" y="122" width="304" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="GQd-4h-EaE"/>
                                         </constraints>
@@ -725,29 +725,226 @@
                                                 <segment label="音乐地址" width="100"/>
                                             </segments>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="searchTypeSegmentClicked:" target="XfG-lQ-9wD" id="Uuc-QN-7tr"/>
+                                        </connections>
                                     </segmentedControl>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="AZu-fe-k85" userLabel="radioView">
+                                        <rect key="frame" x="46" y="32" width="716" height="42"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c8u-Fl-5zs">
+                                                <rect key="frame" x="-1" y="25" width="103" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="D3J-OD-V23"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="L2O-i8-vqq"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Xpb-CW-qaW"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="radio" title="网易" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="kFt-9K-2AG">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-de-sVa">
+                                                <rect key="frame" x="99" y="25" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="QQ" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="nEg-O7-8Wp">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-uk-Ep5">
+                                                <rect key="frame" x="199" y="25" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="酷狗" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="aAB-bQ-3do">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-F5-qxn">
+                                                <rect key="frame" x="299" y="25" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="酷我" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="AGR-rG-Tkg">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-TC-Zw1">
+                                                <rect key="frame" x="399" y="25" width="49" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="虾米" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UGc-Hh-bb1">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-bl-hiI">
+                                                <rect key="frame" x="-1" y="-1" width="103" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="xkQ-cL-jUK"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="y0v-Ox-RN7"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="radio" title="咪咕" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="15A-Re-lQd">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="1kg-em-5bY"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-8k-0tp">
+                                                <rect key="frame" x="591" y="25" width="49" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="一听" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="9Bv-6i-FYx">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mql-1x-JvX">
+                                                <rect key="frame" x="99" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="荔枝" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="pg9-8E-mgg">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TMB-K6-e65">
+                                                <rect key="frame" x="199" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="蜻蜓" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="8LU-yL-ml1">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-p4-U3w">
+                                                <rect key="frame" x="299" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="喜马拉雅" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Hrp-1i-O7F">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-ax-MwO">
+                                                <rect key="frame" x="399" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="全名K歌" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="pP4-ci-UYP">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-e0-tNs">
+                                                <rect key="frame" x="499" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="5sing原唱" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="qCF-8W-EIr">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-Ua-2hw">
+                                                <rect key="frame" x="599" y="-1" width="103" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="5Sing翻唱" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4eo-13-HNl">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MnQ-AS-zph">
+                                                <rect key="frame" x="491" y="25" width="49" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="百度" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Ffk-Lu-I4i">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c2S-8k-0tp" firstAttribute="height" secondItem="MnQ-AS-zph" secondAttribute="height" id="3jk-GF-faC"/>
+                                            <constraint firstItem="YRg-e0-tNs" firstAttribute="height" secondItem="TMB-K6-e65" secondAttribute="height" id="3jw-n7-CvK"/>
+                                            <constraint firstItem="bcO-de-sVa" firstAttribute="leading" secondItem="c8u-Fl-5zs" secondAttribute="trailing" id="5DD-X5-urm"/>
+                                            <constraint firstItem="4cs-Ua-2hw" firstAttribute="top" secondItem="c2S-8k-0tp" secondAttribute="bottom" constant="10" id="5IC-7E-IjP"/>
+                                            <constraint firstItem="Umu-bl-hiI" firstAttribute="top" secondItem="c8u-Fl-5zs" secondAttribute="bottom" constant="10" id="5Qx-gH-Ej2"/>
+                                            <constraint firstItem="Jsy-ax-MwO" firstAttribute="top" secondItem="sWs-F5-qxn" secondAttribute="bottom" constant="10" id="6fb-me-beJ"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c2S-8k-0tp" secondAttribute="trailing" constant="20" symbolic="YES" id="8s0-wF-fUq"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="leading" secondItem="A3Q-TC-Zw1" secondAttribute="trailing" constant="46" id="AJj-Xq-m8p"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="A3Q-TC-Zw1" secondAttribute="baseline" id="Bc0-7C-zhq"/>
+                                            <constraint firstItem="YRg-e0-tNs" firstAttribute="leading" secondItem="xK3-p4-U3w" secondAttribute="trailing" constant="100" id="BdU-R0-Jr3"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="bcO-de-sVa" secondAttribute="baseline" id="CJQ-IE-2qT"/>
+                                            <constraint firstItem="YRg-e0-tNs" firstAttribute="top" secondItem="A3Q-TC-Zw1" secondAttribute="bottom" constant="10" id="CbN-AO-6QY"/>
+                                            <constraint firstItem="mql-1x-JvX" firstAttribute="width" secondItem="Umu-bl-hiI" secondAttribute="width" id="CcP-fF-0qD"/>
+                                            <constraint firstItem="TMB-K6-e65" firstAttribute="leading" secondItem="mql-1x-JvX" secondAttribute="trailing" id="DQz-jq-R1Z"/>
+                                            <constraint firstItem="YRg-e0-tNs" firstAttribute="leading" secondItem="Jsy-ax-MwO" secondAttribute="trailing" id="EIr-qD-0ma"/>
+                                            <constraint firstItem="A3Q-TC-Zw1" firstAttribute="leading" secondItem="sWs-F5-qxn" secondAttribute="trailing" id="EJ0-rn-aSK"/>
+                                            <constraint firstItem="DJR-uk-Ep5" firstAttribute="leading" secondItem="bcO-de-sVa" secondAttribute="trailing" id="Fk0-qx-cX4"/>
+                                            <constraint firstAttribute="height" constant="42" id="FmZ-gC-Vo0"/>
+                                            <constraint firstItem="TMB-K6-e65" firstAttribute="width" secondItem="mql-1x-JvX" secondAttribute="width" id="FuA-Up-dSf"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="top" secondItem="AZu-fe-k85" secondAttribute="top" id="GE7-hQ-jPA"/>
+                                            <constraint firstItem="TMB-K6-e65" firstAttribute="top" secondItem="DJR-uk-Ep5" secondAttribute="bottom" constant="10" id="Hs8-GF-FUj"/>
+                                            <constraint firstItem="sWs-F5-qxn" firstAttribute="leading" secondItem="DJR-uk-Ep5" secondAttribute="trailing" id="KQz-qH-yQS"/>
+                                            <constraint firstItem="Jsy-ax-MwO" firstAttribute="height" secondItem="TMB-K6-e65" secondAttribute="height" id="Ku6-vQ-PcH"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4cs-Ua-2hw" secondAttribute="trailing" constant="16" id="M02-fr-0Ht"/>
+                                            <constraint firstItem="sWs-F5-qxn" firstAttribute="width" secondItem="DJR-uk-Ep5" secondAttribute="width" id="ONO-aQ-6eP"/>
+                                            <constraint firstItem="mql-1x-JvX" firstAttribute="height" secondItem="Umu-bl-hiI" secondAttribute="height" id="RMa-0r-wCP"/>
+                                            <constraint firstItem="TMB-K6-e65" firstAttribute="height" secondItem="mql-1x-JvX" secondAttribute="height" id="U07-aK-40w"/>
+                                            <constraint firstItem="Jsy-ax-MwO" firstAttribute="width" secondItem="TMB-K6-e65" secondAttribute="width" id="Vui-9f-5Dm"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="DJR-uk-Ep5" secondAttribute="baseline" id="YrV-uG-TTQ"/>
+                                            <constraint firstItem="c2S-8k-0tp" firstAttribute="width" secondItem="MnQ-AS-zph" secondAttribute="width" id="Zfm-y8-xrd"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="sWs-F5-qxn" secondAttribute="baseline" id="a0d-Mx-AQV"/>
+                                            <constraint firstItem="4cs-Ua-2hw" firstAttribute="height" secondItem="TMB-K6-e65" secondAttribute="height" id="a9j-Io-dgT"/>
+                                            <constraint firstItem="bcO-de-sVa" firstAttribute="width" secondItem="c8u-Fl-5zs" secondAttribute="width" id="aDO-4b-g7I"/>
+                                            <constraint firstItem="DJR-uk-Ep5" firstAttribute="height" secondItem="bcO-de-sVa" secondAttribute="height" id="eLc-M6-dpb"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="width" secondItem="A3Q-TC-Zw1" secondAttribute="width" id="f1O-aG-VV6"/>
+                                            <constraint firstItem="Umu-bl-hiI" firstAttribute="leading" secondItem="c8u-Fl-5zs" secondAttribute="leading" id="g65-BY-8rv"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="c2S-8k-0tp" secondAttribute="baseline" id="hOr-KL-IXc"/>
+                                            <constraint firstItem="4cs-Ua-2hw" firstAttribute="width" secondItem="TMB-K6-e65" secondAttribute="width" id="hab-6V-oPW"/>
+                                            <constraint firstItem="xK3-p4-U3w" firstAttribute="width" secondItem="TMB-K6-e65" secondAttribute="width" id="hht-9P-rkl"/>
+                                            <constraint firstAttribute="trailing" secondItem="MnQ-AS-zph" secondAttribute="trailing" constant="178" id="idJ-Lo-AmI"/>
+                                            <constraint firstItem="Jsy-ax-MwO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TMB-K6-e65" secondAttribute="trailing" constant="8" symbolic="YES" id="iqP-xz-z9T"/>
+                                            <constraint firstItem="mql-1x-JvX" firstAttribute="top" secondItem="bcO-de-sVa" secondAttribute="bottom" constant="10" id="ist-Fs-hb9"/>
+                                            <constraint firstItem="c2S-8k-0tp" firstAttribute="leading" secondItem="A3Q-TC-Zw1" secondAttribute="trailing" constant="146" id="jj2-rw-YSo"/>
+                                            <constraint firstItem="4cs-Ua-2hw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YRg-e0-tNs" secondAttribute="trailing" id="kb4-uJ-IbT"/>
+                                            <constraint firstItem="4cs-Ua-2hw" firstAttribute="leading" secondItem="YRg-e0-tNs" secondAttribute="trailing" id="ky1-uk-ojn"/>
+                                            <constraint firstItem="xK3-p4-U3w" firstAttribute="height" secondItem="TMB-K6-e65" secondAttribute="height" id="lL6-86-aB8"/>
+                                            <constraint firstItem="sWs-F5-qxn" firstAttribute="height" secondItem="DJR-uk-Ep5" secondAttribute="height" id="ohW-E3-JrI"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="height" secondItem="A3Q-TC-Zw1" secondAttribute="height" id="qKp-SK-9ao"/>
+                                            <constraint firstItem="TMB-K6-e65" firstAttribute="top" secondItem="DJR-uk-Ep5" secondAttribute="bottom" constant="10" id="rh0-tq-oxw"/>
+                                            <constraint firstItem="bcO-de-sVa" firstAttribute="height" secondItem="c8u-Fl-5zs" secondAttribute="height" id="sDA-0W-TuN"/>
+                                            <constraint firstItem="DJR-uk-Ep5" firstAttribute="width" secondItem="bcO-de-sVa" secondAttribute="width" id="tHa-2B-JSO"/>
+                                            <constraint firstItem="MnQ-AS-zph" firstAttribute="baseline" secondItem="c8u-Fl-5zs" secondAttribute="baseline" id="uWA-Ls-mmJ"/>
+                                            <constraint firstItem="mql-1x-JvX" firstAttribute="leading" secondItem="Umu-bl-hiI" secondAttribute="trailing" id="udF-b5-oNG"/>
+                                            <constraint firstItem="YRg-e0-tNs" firstAttribute="width" secondItem="TMB-K6-e65" secondAttribute="width" id="vHh-x1-Cq5"/>
+                                            <constraint firstItem="xK3-p4-U3w" firstAttribute="leading" secondItem="mql-1x-JvX" secondAttribute="trailing" constant="100" id="vtA-nM-XdA"/>
+                                            <constraint firstItem="xK3-p4-U3w" firstAttribute="top" secondItem="DJR-uk-Ep5" secondAttribute="bottom" constant="10" id="x0C-18-FA8"/>
+                                        </constraints>
+                                    </customView>
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRF-jZ-3fp">
+                                        <rect key="frame" x="30" y="84" width="748" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L4a-HU-MMS"/>
+                                        </constraints>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="tPN-42-zbl">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </searchFieldCell>
+                                        <connections>
+                                            <action selector="searchClicked:" target="XfG-lQ-9wD" id="eKR-3g-0U4"/>
+                                        </connections>
+                                    </searchField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tmL-EH-A8X" firstAttribute="centerX" secondItem="02T-NR-bYX" secondAttribute="centerX" id="63d-qk-uG4"/>
-                                    <constraint firstItem="tmL-EH-A8X" firstAttribute="top" secondItem="02T-NR-bYX" secondAttribute="top" constant="20" id="IWd-g8-5HB"/>
-                                    <constraint firstAttribute="height" constant="100" id="SY7-8C-PGc"/>
+                                    <constraint firstItem="tmL-EH-A8X" firstAttribute="top" secondItem="02T-NR-bYX" secondAttribute="top" constant="5" id="IWd-g8-5HB"/>
+                                    <constraint firstItem="AZu-fe-k85" firstAttribute="centerX" secondItem="02T-NR-bYX" secondAttribute="centerX" id="Nli-lV-M2c"/>
+                                    <constraint firstAttribute="height" constant="150" id="SY7-8C-PGc"/>
+                                    <constraint firstItem="IRF-jZ-3fp" firstAttribute="top" secondItem="tmL-EH-A8X" secondAttribute="bottom" constant="10" id="cvW-Eg-zzO"/>
+                                    <constraint firstItem="IRF-jZ-3fp" firstAttribute="leading" secondItem="02T-NR-bYX" secondAttribute="leading" constant="30" id="eIS-3J-GBk"/>
+                                    <constraint firstAttribute="trailing" secondItem="IRF-jZ-3fp" secondAttribute="trailing" constant="30" id="gxY-Kh-Uuv"/>
+                                    <constraint firstItem="AZu-fe-k85" firstAttribute="top" secondItem="IRF-jZ-3fp" secondAttribute="bottom" constant="10" id="ibA-Ar-rXM"/>
+                                    <constraint firstItem="AZu-fe-k85" firstAttribute="leading" secondItem="02T-NR-bYX" secondAttribute="leading" constant="46" id="vAJ-OY-GlJ"/>
                                 </constraints>
                             </customView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="102" horizontalPageScroll="10" verticalLineScroll="102" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt2-qI-AWY">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="808" height="650"/>
                                 <clipView key="contentView" id="io3-v7-mpU">
-                                    <rect key="frame" x="1" y="0.0" width="498" height="399"/>
+                                    <rect key="frame" x="1" y="0.0" width="806" height="649"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="100" rowSizeStyle="automatic" headerView="Eg3-i6-P3c" viewBased="YES" id="vGY-qC-FAF">
-                                            <rect key="frame" x="0.0" y="0.0" width="498" height="374"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="100" rowSizeStyle="automatic" headerView="Eg3-i6-P3c" viewBased="YES" id="vGY-qC-FAF">
+                                            <rect key="frame" x="0.0" y="0.0" width="806" height="624"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="495" minWidth="40" maxWidth="1000" id="9bf-BL-Wci">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                <tableColumn identifier="music" width="803" minWidth="40" maxWidth="1000" id="9bf-BL-Wci">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="music">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -760,22 +957,15 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="BF8-IP-4MA">
-                                                            <rect key="frame" x="1" y="1" width="495" height="100"/>
+                                                            <rect key="frame" x="1" y="1" width="803" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="at4-fS-cuu">
-                                                                    <rect key="frame" x="5" y="26" width="48" height="48"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="48" id="R5s-li-USw"/>
-                                                                        <constraint firstAttribute="height" constant="48" id="qji-AY-qSV"/>
-                                                                    </constraints>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bNh-By-6mL"/>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-i2-sAw">
+                                                                    <rect key="frame" x="44" y="34" width="48" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAddTemplate" id="Gsd-re-WVX"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="at4-fS-cuu" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="5" id="Rx4-ib-8nb"/>
-                                                                <constraint firstItem="at4-fS-cuu" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="UwY-I3-fXc"/>
-                                                            </constraints>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -796,7 +986,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="Eg3-i6-P3c">
-                                    <rect key="frame" x="0.0" y="0.0" width="498" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="806" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -814,7 +1004,10 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="241" y="595"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>

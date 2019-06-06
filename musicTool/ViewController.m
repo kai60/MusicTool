@@ -24,5 +24,19 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction)musicTypeClicked:(NSButton *)sender {
+}
+- (IBAction)searchTypeSegmentClicked:(NSSegmentedControl *)sender {
+}
+- (IBAction)searchClicked:(NSSearchField *)sender {
+    
+    NSLog(@"string=%@",sender.stringValue);
+}
+
+#pragma mark ---
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    return 1;
+}
 
 @end
