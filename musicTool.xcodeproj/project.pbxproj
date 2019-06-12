@@ -18,6 +18,12 @@
 		2AE4A4FF2292D3C20079D834 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4F62292D3C20079D834 /* AFURLRequestSerialization.m */; };
 		2AE4A5002292D3C20079D834 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4F82292D3C20079D834 /* AFNetworkReachabilityManager.m */; };
 		2AE4A5012292D3C20079D834 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4F92292D3C20079D834 /* AFSecurityPolicy.m */; };
+		C01C9D6022B0AB9000F45584 /* MusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D5F22B0AB9000F45584 /* MusicCell.m */; };
+		C01C9D6222B0D6C900F45584 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D6122B0D6C900F45584 /* 1.jpeg */; };
+		C01C9D6E22B0FD5F00F45584 /* OTFileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6622B0FD5E00F45584 /* OTFileCacheManager.m */; };
+		C01C9D6F22B0FD5F00F45584 /* OTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */; };
+		C01C9D7022B0FD5F00F45584 /* OTWebImageDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */; };
+		C01C9D7122B0FD5F00F45584 /* NSImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,17 @@
 		2AE4A4F92292D3C20079D834 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		2AE4A4FA2292D3C20079D834 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		2AE4A4FB2292D3C20079D834 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C01C9D5E22B0AB9000F45584 /* MusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCell.h; sourceTree = "<group>"; };
+		C01C9D5F22B0AB9000F45584 /* MusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicCell.m; sourceTree = "<group>"; };
+		C01C9D6122B0D6C900F45584 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		C01C9D6522B0FD5E00F45584 /* OTFileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTFileCacheManager.h; sourceTree = "<group>"; };
+		C01C9D6622B0FD5E00F45584 /* OTFileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTFileCacheManager.m; sourceTree = "<group>"; };
+		C01C9D6722B0FD5E00F45584 /* OTWebImageDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTWebImageDownloadRequest.h; sourceTree = "<group>"; };
+		C01C9D6822B0FD5E00F45584 /* NSImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImageView+WebCache.h"; sourceTree = "<group>"; };
+		C01C9D6A22B0FD5E00F45584 /* OTHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTHTTPRequest.h; sourceTree = "<group>"; };
+		C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTHTTPRequest.m; sourceTree = "<group>"; };
+		C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTWebImageDownloadRequest.m; sourceTree = "<group>"; };
+		C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+WebCache.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +94,7 @@
 		2AE4A4D72292D24D0079D834 /* musicTool */ = {
 			isa = PBXGroup;
 			children = (
+				C01C9D6122B0D6C900F45584 /* 1.jpeg */,
 				2AE4A4EC2292D3C20079D834 /* libs */,
 				2AE4A4D82292D24D0079D834 /* AppDelegate.h */,
 				2AE4A4D92292D24D0079D834 /* AppDelegate.m */,
@@ -87,6 +105,8 @@
 				2AE4A4E32292D24E0079D834 /* Info.plist */,
 				2AE4A4E42292D24E0079D834 /* main.m */,
 				2AE4A4E62292D24E0079D834 /* musicTool.entitlements */,
+				C01C9D5E22B0AB9000F45584 /* MusicCell.h */,
+				C01C9D5F22B0AB9000F45584 /* MusicCell.m */,
 			);
 			path = musicTool;
 			sourceTree = "<group>";
@@ -94,6 +114,7 @@
 		2AE4A4EC2292D3C20079D834 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				C01C9D6322B0FD5E00F45584 /* OTWebImage */,
 				2AE4A4ED2292D3C20079D834 /* AFNetworking */,
 			);
 			path = libs;
@@ -118,6 +139,37 @@
 				2AE4A4FB2292D3C20079D834 /* AFHTTPSessionManager.h */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		C01C9D6322B0FD5E00F45584 /* OTWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				C01C9D6422B0FD5E00F45584 /* OTFileCacheManager */,
+				C01C9D6722B0FD5E00F45584 /* OTWebImageDownloadRequest.h */,
+				C01C9D6822B0FD5E00F45584 /* NSImageView+WebCache.h */,
+				C01C9D6922B0FD5E00F45584 /* OTHTTPRequest */,
+				C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */,
+				C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */,
+			);
+			path = OTWebImage;
+			sourceTree = "<group>";
+		};
+		C01C9D6422B0FD5E00F45584 /* OTFileCacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				C01C9D6522B0FD5E00F45584 /* OTFileCacheManager.h */,
+				C01C9D6622B0FD5E00F45584 /* OTFileCacheManager.m */,
+			);
+			path = OTFileCacheManager;
+			sourceTree = "<group>";
+		};
+		C01C9D6922B0FD5E00F45584 /* OTHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C01C9D6A22B0FD5E00F45584 /* OTHTTPRequest.h */,
+				C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */,
+			);
+			path = OTHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4A4DF2292D24E0079D834 /* Assets.xcassets in Resources */,
+				C01C9D6222B0D6C900F45584 /* 1.jpeg in Resources */,
 				2AE4A4E22292D24E0079D834 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,14 +243,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4A4DD2292D24D0079D834 /* ViewController.m in Sources */,
+				C01C9D6E22B0FD5F00F45584 /* OTFileCacheManager.m in Sources */,
+				C01C9D7022B0FD5F00F45584 /* OTWebImageDownloadRequest.m in Sources */,
 				2AE4A5012292D3C20079D834 /* AFSecurityPolicy.m in Sources */,
 				2AE4A4E52292D24E0079D834 /* main.m in Sources */,
+				C01C9D7122B0FD5F00F45584 /* NSImageView+WebCache.m in Sources */,
 				2AE4A4FD2292D3C20079D834 /* AFHTTPSessionManager.m in Sources */,
 				2AE4A4FE2292D3C20079D834 /* AFURLSessionManager.m in Sources */,
+				C01C9D6F22B0FD5F00F45584 /* OTHTTPRequest.m in Sources */,
 				2AE4A4FC2292D3C20079D834 /* AFURLResponseSerialization.m in Sources */,
 				2AE4A4FF2292D3C20079D834 /* AFURLRequestSerialization.m in Sources */,
 				2AE4A5002292D3C20079D834 /* AFNetworkReachabilityManager.m in Sources */,
 				2AE4A4DA2292D24D0079D834 /* AppDelegate.m in Sources */,
+				C01C9D6022B0AB9000F45584 /* MusicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

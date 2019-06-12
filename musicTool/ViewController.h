@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MusicCell.h"
 
 @interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate,NSSearchFieldDelegate>
 
+@property (weak) IBOutlet NSSearchField *searchBar;
 
 @end
 
