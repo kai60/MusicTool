@@ -19,11 +19,14 @@
 		2AE4A5002292D3C20079D834 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4F82292D3C20079D834 /* AFNetworkReachabilityManager.m */; };
 		2AE4A5012292D3C20079D834 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4F92292D3C20079D834 /* AFSecurityPolicy.m */; };
 		C01C9D6022B0AB9000F45584 /* MusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D5F22B0AB9000F45584 /* MusicCell.m */; };
-		C01C9D6222B0D6C900F45584 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D6122B0D6C900F45584 /* 1.jpeg */; };
 		C01C9D6E22B0FD5F00F45584 /* OTFileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6622B0FD5E00F45584 /* OTFileCacheManager.m */; };
 		C01C9D6F22B0FD5F00F45584 /* OTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */; };
 		C01C9D7022B0FD5F00F45584 /* OTWebImageDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */; };
 		C01C9D7122B0FD5F00F45584 /* NSImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */; };
+		C01C9D8122B22DA800F45584 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7D22B22DA800F45584 /* stop.png */; };
+		C01C9D8222B22DA800F45584 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7E22B22DA800F45584 /* download.png */; };
+		C01C9D8322B22DA800F45584 /* showinFinder.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7F22B22DA800F45584 /* showinFinder.png */; };
+		C01C9D8422B22DA800F45584 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D8022B22DA800F45584 /* play.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +56,6 @@
 		2AE4A4FB2292D3C20079D834 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		C01C9D5E22B0AB9000F45584 /* MusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicCell.h; sourceTree = "<group>"; };
 		C01C9D5F22B0AB9000F45584 /* MusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicCell.m; sourceTree = "<group>"; };
-		C01C9D6122B0D6C900F45584 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		C01C9D6522B0FD5E00F45584 /* OTFileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTFileCacheManager.h; sourceTree = "<group>"; };
 		C01C9D6622B0FD5E00F45584 /* OTFileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTFileCacheManager.m; sourceTree = "<group>"; };
 		C01C9D6722B0FD5E00F45584 /* OTWebImageDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTWebImageDownloadRequest.h; sourceTree = "<group>"; };
@@ -62,6 +64,10 @@
 		C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTHTTPRequest.m; sourceTree = "<group>"; };
 		C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTWebImageDownloadRequest.m; sourceTree = "<group>"; };
 		C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+WebCache.m"; sourceTree = "<group>"; };
+		C01C9D7D22B22DA800F45584 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		C01C9D7E22B22DA800F45584 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		C01C9D7F22B22DA800F45584 /* showinFinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showinFinder.png; sourceTree = "<group>"; };
+		C01C9D8022B22DA800F45584 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,7 @@
 		2AE4A4D72292D24D0079D834 /* musicTool */ = {
 			isa = PBXGroup;
 			children = (
-				C01C9D6122B0D6C900F45584 /* 1.jpeg */,
+				C01C9D7C22B22DA800F45584 /* images */,
 				2AE4A4EC2292D3C20079D834 /* libs */,
 				2AE4A4D82292D24D0079D834 /* AppDelegate.h */,
 				2AE4A4D92292D24D0079D834 /* AppDelegate.m */,
@@ -172,6 +178,17 @@
 			path = OTHTTPRequest;
 			sourceTree = "<group>";
 		};
+		C01C9D7C22B22DA800F45584 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C01C9D7D22B22DA800F45584 /* stop.png */,
+				C01C9D7E22B22DA800F45584 /* download.png */,
+				C01C9D7F22B22DA800F45584 /* showinFinder.png */,
+				C01C9D8022B22DA800F45584 /* play.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +220,11 @@
 				TargetAttributes = {
 					2AE4A4D42292D24D0079D834 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -230,8 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4A4DF2292D24E0079D834 /* Assets.xcassets in Resources */,
-				C01C9D6222B0D6C900F45584 /* 1.jpeg in Resources */,
 				2AE4A4E22292D24E0079D834 /* Main.storyboard in Resources */,
+				C01C9D8122B22DA800F45584 /* stop.png in Resources */,
+				C01C9D8322B22DA800F45584 /* showinFinder.png in Resources */,
+				C01C9D8222B22DA800F45584 /* download.png in Resources */,
+				C01C9D8422B22DA800F45584 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,8 +414,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = musicTool/musicTool.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U2S5D5ZDYA;
 				INFOPLIST_FILE = musicTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weaver.musicTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -406,8 +434,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = musicTool/musicTool.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U2S5D5ZDYA;
 				INFOPLIST_FILE = musicTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weaver.musicTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

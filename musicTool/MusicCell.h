@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "NSImageView+WebCache.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MusicCell : NSTableCellView
@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak) IBOutlet NSButton *downloadButton;
 
 @property (unsafe_unretained) IBOutlet NSTextView *lrc;
+@property (weak) IBOutlet NSButton *checkBox;
+@property (assign,nonatomic)  NSDictionary *song;
+-(void)configWithSong:(NSDictionary*)dic;
 
 @end
 

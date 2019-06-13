@@ -13,7 +13,26 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    // Drawing code here.
+   
+}
+-(void)configWithSong:(NSDictionary *)dic
+{
+    NSString*title=dic[@"title"];
+    NSString*author=dic[@"author"];
+    NSString*lrc=dic[@"lrc"];
+     NSString*url=dic[@"url"];
+     NSString*pic=dic[@"pic"];
+    self.title.stringValue=[NSString stringWithFormat:@"%@-%@",title,author];
+    self.lrc.string=lrc;
+    [self.icon setImageURL:[NSURL URLWithString:pic]];
+    self.song=dic;
+    
+}
+- (IBAction)checked:(NSButton *)sender {
+}
+- (IBAction)download:(NSButton *)sender {
+}
+- (IBAction)play:(NSButton *)sender {
 }
 
 @end

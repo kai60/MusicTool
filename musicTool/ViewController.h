@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MusicCell.h"
+#import "AFNetworking.h"
 
 @interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate,NSSearchFieldDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchBar;
+@property (weak) IBOutlet NSButton *radio;
 
 @end
 

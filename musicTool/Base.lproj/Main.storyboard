@@ -726,7 +726,7 @@
                                             </segments>
                                         </segmentedCell>
                                         <connections>
-                                            <action selector="searchTypeSegmentClicked:" target="XfG-lQ-9wD" id="Uuc-QN-7tr"/>
+                                            <action selector="searchFilterSegmentClicked:" target="XfG-lQ-9wD" id="Lee-Uk-ctg"/>
                                         </connections>
                                     </segmentedControl>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="AZu-fe-k85" userLabel="radioView">
@@ -743,36 +743,51 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="YjW-Kw-80K"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-de-sVa">
+                                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-de-sVa">
                                                 <rect key="frame" x="99" y="25" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="QQ" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="nEg-O7-8Wp">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="Oul-tt-URb"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-uk-Ep5">
+                                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="DJR-uk-Ep5">
                                                 <rect key="frame" x="199" y="25" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="酷狗" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="aAB-bQ-3do">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="DIv-1D-MKe"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-F5-qxn">
+                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-F5-qxn">
                                                 <rect key="frame" x="299" y="25" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="酷我" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="AGR-rG-Tkg">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="oH9-gp-y9u"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-TC-Zw1">
+                                            <button verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-TC-Zw1">
                                                 <rect key="frame" x="399" y="25" width="49" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="虾米" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UGc-Hh-bb1">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="8VZ-gs-ImS"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-bl-hiI">
+                                            <button verticalHuggingPriority="750" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-bl-hiI">
                                                 <rect key="frame" x="-1" y="-1" width="103" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="xkQ-cL-jUK"/>
@@ -783,64 +798,88 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="1kg-em-5bY"/>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="5ov-II-lKb"/>
                                                 </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-8k-0tp">
+                                            <button verticalHuggingPriority="750" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-8k-0tp">
                                                 <rect key="frame" x="591" y="25" width="49" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="一听" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="9Bv-6i-FYx">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="wsb-El-a58"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mql-1x-JvX">
+                                            <button verticalHuggingPriority="750" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="mql-1x-JvX">
                                                 <rect key="frame" x="99" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="荔枝" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="pg9-8E-mgg">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="Fka-7f-oDB"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TMB-K6-e65">
+                                            <button verticalHuggingPriority="750" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="TMB-K6-e65">
                                                 <rect key="frame" x="199" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="蜻蜓" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="8LU-yL-ml1">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="fnd-ld-avG"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-p4-U3w">
+                                            <button verticalHuggingPriority="750" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-p4-U3w">
                                                 <rect key="frame" x="299" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="喜马拉雅" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Hrp-1i-O7F">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="GgF-qS-lTZ"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-ax-MwO">
+                                            <button verticalHuggingPriority="750" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-ax-MwO">
                                                 <rect key="frame" x="399" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="全名K歌" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="pP4-ci-UYP">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="rNq-yE-K8E"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-e0-tNs">
+                                            <button verticalHuggingPriority="750" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-e0-tNs">
                                                 <rect key="frame" x="499" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="5sing原唱" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="qCF-8W-EIr">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="hDf-Ub-1qI"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-Ua-2hw">
+                                            <button verticalHuggingPriority="750" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-Ua-2hw">
                                                 <rect key="frame" x="599" y="-1" width="103" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="5Sing翻唱" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4eo-13-HNl">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="XcX-xz-e3I"/>
+                                                </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MnQ-AS-zph">
+                                            <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="MnQ-AS-zph">
                                                 <rect key="frame" x="491" y="25" width="49" height="18"/>
                                                 <buttonCell key="cell" type="radio" title="百度" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Ffk-Lu-I4i">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="musicTypeClicked:" target="XfG-lQ-9wD" id="xzO-z4-wA1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -929,11 +968,11 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="122" horizontalPageScroll="10" verticalLineScroll="122" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt2-qI-AWY">
                                 <rect key="frame" x="0.0" y="0.0" width="808" height="650"/>
                                 <clipView key="contentView" id="io3-v7-mpU">
-                                    <rect key="frame" x="1" y="0.0" width="806" height="649"/>
+                                    <rect key="frame" x="1" y="1" width="806" height="648"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="120" rowSizeStyle="automatic" headerView="Eg3-i6-P3c" viewBased="YES" id="vGY-qC-FAF">
-                                            <rect key="frame" x="0.0" y="0.0" width="806" height="624"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="120" rowSizeStyle="automatic" viewBased="YES" id="vGY-qC-FAF">
+                                            <rect key="frame" x="0.0" y="0.0" width="806" height="648"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -957,7 +996,7 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-i2-sAw" userLabel="icon">
-                                                                    <rect key="frame" x="5" y="10" width="100" height="100"/>
+                                                                    <rect key="frame" x="30" y="10" width="100" height="100"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="100" id="DWw-Nx-SMU"/>
                                                                         <constraint firstAttribute="height" constant="100" id="Gs4-H3-W2C"/>
@@ -965,7 +1004,7 @@
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAddTemplate" id="Gsd-re-WVX"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-vt-M9w" userLabel="title">
-                                                                    <rect key="frame" x="133" y="70" width="190" height="30"/>
+                                                                    <rect key="frame" x="158" y="70" width="190" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="Qwb-kC-5jv"/>
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UWx-fZ-hG8"/>
@@ -977,15 +1016,18 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-yQ-4eb" userLabel="playButton">
-                                                                    <rect key="frame" x="135" y="10" width="50" height="50"/>
+                                                                    <rect key="frame" x="160" y="10" width="50" height="50"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="5Qs-WJ-Lvf"/>
                                                                         <constraint firstAttribute="width" constant="50" id="tKk-Rz-kXF"/>
                                                                     </constraints>
-                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSBonjour" imagePosition="only" alignment="center" borderStyle="border" transparent="YES" inset="2" id="NdP-yR-VYp">
+                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play" imagePosition="only" alignment="center" borderStyle="border" transparent="YES" inset="2" id="NdP-yR-VYp">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="play:" target="BF8-IP-4MA" id="byX-xb-4nM"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="bOa-Br-hE4" userLabel="downloadButton">
                                                                     <rect key="frame" x="743" y="45" width="30" height="30"/>
@@ -993,10 +1035,13 @@
                                                                         <constraint firstAttribute="height" constant="30" id="3pH-31-oNU"/>
                                                                         <constraint firstAttribute="width" constant="30" id="Vfy-2h-WkJ"/>
                                                                     </constraints>
-                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusAvailable" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k4C-Ec-nXp">
+                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="download" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k4C-Ec-nXp">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="download:" target="BF8-IP-4MA" id="Vid-HE-OrN"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="5" horizontalPageScroll="5" verticalLineScroll="5" verticalPageScroll="0.0" hasHorizontalScroller="NO" hasVerticalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chj-jt-stl" userLabel="lrc">
                                                                     <rect key="frame" x="423" y="12" width="227" height="95"/>
@@ -1006,7 +1051,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textView ambiguous="YES" editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" baseWritingDirection="leftToRight" spellingCorrection="YES" smartInsertDelete="YES" id="hWU-cs-TiJ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="227" height="255"/>
+                                                                                <rect key="frame" x="0.0" y="-41" width="227" height="255"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1179,19 +1224,36 @@ Cg
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                     </scroller>
                                                                 </scrollView>
+                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-ir-FWQ">
+                                                                    <rect key="frame" x="3" y="51" width="22" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="14" id="ZXK-IK-BsM"/>
+                                                                        <constraint firstAttribute="width" constant="18" id="hk5-hB-lZP"/>
+                                                                    </constraints>
+                                                                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="fzv-eC-gsT">
+                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                        <font key="font" metaFont="system"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="checked:" target="BF8-IP-4MA" id="Q8t-9Q-G5o"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="y0a-vt-M9w" firstAttribute="top" secondItem="BF8-IP-4MA" secondAttribute="top" constant="20" id="4dB-tx-yPD"/>
                                                                 <constraint firstItem="fLI-i2-sAw" firstAttribute="top" secondItem="BF8-IP-4MA" secondAttribute="top" constant="10" id="4mT-UW-ibE"/>
+                                                                <constraint firstItem="MMQ-ir-FWQ" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="CGv-kf-YL8"/>
                                                                 <constraint firstAttribute="trailing" secondItem="bOa-Br-hE4" secondAttribute="trailing" constant="30" id="EPE-Ur-rn5"/>
                                                                 <constraint firstItem="o3R-yQ-4eb" firstAttribute="bottom" secondItem="BF8-IP-4MA" secondAttribute="bottom" constant="-10" id="Gb3-nJ-CSC"/>
                                                                 <constraint firstItem="bOa-Br-hE4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y0a-vt-M9w" secondAttribute="trailing" constant="8" symbolic="YES" id="JYF-Xo-36T"/>
+                                                                <constraint firstItem="MMQ-ir-FWQ" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="5" id="Kk1-jW-VPY"/>
                                                                 <constraint firstItem="y0a-vt-M9w" firstAttribute="leading" secondItem="fLI-i2-sAw" secondAttribute="trailing" constant="30" id="TLI-ia-tUB"/>
                                                                 <constraint firstItem="o3R-yQ-4eb" firstAttribute="leading" secondItem="y0a-vt-M9w" secondAttribute="leading" id="Ur0-ff-TZs"/>
                                                                 <constraint firstItem="bOa-Br-hE4" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="ey5-o6-8gf"/>
-                                                                <constraint firstItem="fLI-i2-sAw" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="5" id="fmT-RW-w8M"/>
+                                                                <constraint firstItem="fLI-i2-sAw" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="30" id="fmT-RW-w8M"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="checkBox" destination="MMQ-ir-FWQ" id="qrw-09-i5f"/>
                                                                 <outlet property="downloadButton" destination="o3R-yQ-4eb" id="0vg-1D-P8p"/>
                                                                 <outlet property="icon" destination="fLI-i2-sAw" id="pnn-EG-zyb"/>
                                                                 <outlet property="lrc" destination="hWU-cs-TiJ" id="p0o-ss-kyq"/>
@@ -1217,10 +1279,6 @@ Cg
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="Eg3-i6-P3c">
-                                    <rect key="frame" x="0.0" y="0.0" width="806" height="25"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableHeaderView>
                             </scrollView>
                         </subviews>
                         <constraints>
@@ -1234,6 +1292,7 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="radio" destination="bcO-de-sVa" id="NoR-Oa-LF2"/>
                         <outlet property="searchBar" destination="IRF-jZ-3fp" id="wTi-bG-TBQ"/>
                     </connections>
                 </viewController>
@@ -1244,7 +1303,7 @@ Cg
     </scenes>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSBonjour" width="32" height="32"/>
-        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="download" width="200" height="200"/>
+        <image name="play" width="30" height="30"/>
     </resources>
 </document>
