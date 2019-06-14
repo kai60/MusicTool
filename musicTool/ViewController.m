@@ -131,6 +131,7 @@
    
     NSLog(@"filer=%@",self.fliter);
     NSLog(@"type=%@",self.type);
+    [self.dataArray removeAllObjects];
     self.page=1;
     NSString*host=@"http://www.zhmdy.top/music/";
     NSString*urlString=[[NSString stringWithFormat:@"%@?%@=%@&type=%@",host,self.fliter,sender.stringValue,self.type]  stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
