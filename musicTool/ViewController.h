@@ -10,10 +10,11 @@
 #import "MusicCell.h"
 #import "AFNetworking.h"
 
-@interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate,NSSearchFieldDelegate>
+@interface ViewController : NSViewController<NSTableViewDataSource,NSTableViewDelegate,NSSearchFieldDelegate,MusicDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchBar;
 @property (weak) IBOutlet NSButton *radio;
+@property (weak) IBOutlet NSTableView *tableView;
 
 @end
 

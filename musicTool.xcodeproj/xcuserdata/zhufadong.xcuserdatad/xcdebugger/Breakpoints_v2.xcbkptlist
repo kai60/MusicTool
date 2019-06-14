@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "musicTool/ViewController.m"
-            timestampString = "582113120.956604"
+            timestampString = "582199694.2693191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "-searchClicked:"
             landmarkType = "7">
          </BreakpointContent>

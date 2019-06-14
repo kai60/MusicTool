@@ -10,6 +10,15 @@
 #import "NSImageView+WebCache.h"
 NS_ASSUME_NONNULL_BEGIN
 
+
+@protocol MusicDelegate <NSObject>
+
+-(void)loadMoreMusic;
+-(void)downLoadWithSong:(NSDictionary*)song;
+-(void)checkWithSong:(NSDictionary*)song state:(BOOL)checked;
+-(void)playWithSong:(NSDictionary*)song;
+
+@end
 @interface MusicCell : NSTableCellView
 
 @property (weak) IBOutlet NSImageView *icon;
@@ -17,10 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak) IBOutlet NSButton *playButton;
 @property (weak) IBOutlet NSButton *downloadButton;
 
-@property (unsafe_unretained) IBOutlet NSTextView *lrc;
+@property (weak) IBOutlet NSButton *loadMore;
+
 @property (weak) IBOutlet NSButton *checkBox;
-@property (assign,nonatomic)  NSDictionary *song;
--(void)configWithSong:(NSDictionary*)dic;
+@property (strong,nonatomic)  NSDictionary *song;
+@property(nonatomic,strong)id<MusicDelegate> delegate;
+-(void)configWithSong:(NSDictionary*)dic Selected:(BOOL)select;
 
 @end
 
