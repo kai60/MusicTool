@@ -18,6 +18,9 @@
 @property(nonatomic,strong)AFHTTPSessionManager* manager;
 @property(nonatomic,assign)NSUInteger page;
 @property(nonatomic,strong)NSMutableArray* downLoadArray;
+@property(nonatomic,strong)AVAudioPlayer* audioPlayer;
+@property(nonatomic,strong)AVPlayer* avPlayer;
+@property(nonatomic,strong)MusicCell* currentCell;
 
 @end
 @implementation ViewController
@@ -115,7 +118,7 @@
     
     for (NSDictionary*song in self.downLoadArray)
     {
-        [self downLoadWithSong:song];
+        [self downLoadWithSong:song cell:nil];
     }
 }
 
@@ -127,10 +130,11 @@
 }
 - (void)searchClicked:(NSSearchField *)sender {
     
-    NSLog(@"serach=%@",sender.stringValue);
-   
-    NSLog(@"filer=%@",self.fliter);
-    NSLog(@"type=%@",self.type);
+    [self.audioPlayer stop];
+    self.audioPlayer=nil;
+    
+    [self.avPlayer pause];
+    self.avPlayer=nil;
     [self.dataArray removeAllObjects];
     self.page=1;
     NSString*host=@"http://www.zhmdy.top/music/";
@@ -180,51 +184,84 @@
    
     [self loadDataFormSorce];
 }
--(void)downLoadWithSong:(NSDictionary*)song
+-(void)downLoadWithSong:(NSDictionary*)song cell:(nullable id)cell
 {
     NSString* directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Downloads"];
+    
     NSString *urlString = song[@"url"];
-    NSString *lrc = [NSString stringWithFormat:@"%@-%@.lrc",song[@"author"],song[@"title"]];
-    NSString *mp3 = [NSString stringWithFormat:@"%@-%@.mp3",song[@"author"],song[@"title"]];
+    if (!urlString.length)
+    {
+        return;
+    }
+   
+    NSString *lrc = [NSString stringWithFormat:@"%@_%@.lrc",song[@"author"],song[@"title"]];
+    NSString *mp3 = [NSString stringWithFormat:@"%@_%@.mp3",song[@"author"],song[@"title"]];
     NSString*mp3Path=[directory stringByAppendingPathComponent:mp3];
     NSString*lrcPath=[directory stringByAppendingPathComponent:lrc];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    
-    
-    NSURLSessionDownloadTask *download = [self.manager   downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        //下载进度
+   
+     BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
+    if (isexsites&&cell)
+    {
+        [[NSWorkspace sharedWorkspace] selectFile:mp3Path inFileViewerRootedAtPath:@""];
+    }
+    else if (isexsites)
+    {
         
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        
-        
-        BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
-        if (isexsites)
-        {
-            [[NSFileManager defaultManager] removeItemAtPath:mp3Path error:nil];
-        }
+    }
+    else
+    {
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
         
         
-        
-        return [NSURL fileURLWithPath:mp3Path];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        if(!error)
-        {
-            NSString*lrcString=song[@"lrc"];
+        NSURLSessionDownloadTask *download = [self.manager   downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+            //下载进度
             
-            BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:lrcPath];
+        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            
+            
+            BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
             if (isexsites)
             {
-                [[NSFileManager defaultManager] removeItemAtPath:lrcPath error:nil];
+                [[NSFileManager defaultManager]removeItemAtPath:mp3Path error:nil];  ;
             }
-            [lrcString writeToFile:lrcPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             
-        }
+            NSURL*url=[NSURL fileURLWithPath:mp3Path];
+            
+            return url;
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            
+            if(!error)
+            {
+                NSString*lrcString=song[@"lrc"];
+                
+                BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:lrcPath];
+                if (isexsites)
+                {
+                    [[NSFileManager defaultManager] removeItemAtPath:lrcPath error:nil];
+                }
+                [lrcString writeToFile:lrcPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                NSInteger index= [self.dataArray indexOfObject:song];
+                [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+                
+            }
+            
+        }];
         
-    }];
+        //执行Task
+        [download resume];
+    }
     
-    //执行Task
-    [download resume];
 }
 -(void)checkWithSong:(NSDictionary*)song state:(BOOL)checked
 {
@@ -242,9 +279,98 @@
         }
     }
 }
--(void)playWithSong:(NSDictionary*)song
+-(void)playWithSong:(NSDictionary*)song cell:(MusicCell*)cell
 {
+    if (self.currentCell!=cell)
+    {
+        self.currentCell.isPlaying=NO;
+        self.currentCell.playButton.image=[NSImage imageNamed:@"play.png"];
+        
+    }
     
+    NSString* directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Downloads"];
+    
+    NSString *mp3 = [NSString stringWithFormat:@"%@_%@.mp3",song[@"author"],song[@"title"]];
+    NSString*mp3Path=[directory stringByAppendingPathComponent:mp3];
+    BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
+    
+    cell.isPlaying=!cell.isPlaying;
+    if (cell.isPlaying)
+    {
+        cell.playButton.image=[NSImage imageNamed:@"stop.png"];
+    }
+    else
+    {
+        cell.playButton.image=[NSImage imageNamed:@"play.png"];
+        if (isexsites)
+        {
+            [self.audioPlayer stop];
+            self.audioPlayer=nil;
+        }
+        else
+        {
+            [self.avPlayer pause];
+             self.avPlayer=nil;
+            
+        }
+        
+       
+    }
+    
+    
+    
+   
+    if (isexsites)
+    {
+        NSError*error;
+        AVAudioPlayer* player=[[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:mp3Path] error:&error];
+        player.volume=0.8;
+        self.audioPlayer=player;
+        player.delegate=self;
+        if (error)
+        {
+            NSLog(@"error=%@",error);
+        }
+        else
+        {
+            [player prepareToPlay];
+            [player play];
+        }
+       
+    }
+    else
+    {
+        NSError*error;
+        AVPlayerItem*item=[AVPlayerItem playerItemWithURL:[NSURL URLWithString:song[@"url"]]];
+        AVPlayer* player=[[AVPlayer alloc]initWithPlayerItem:item];;
+        player.volume=0.8;
+        self.avPlayer=player;
+        
+        if (error)
+        {
+            NSLog(@"error=%@",error);
+        }
+        else
+        {
+           
+            [player play];
+        }
+        
+    }
+    self.currentCell=cell;
+    
+}
+
+
+
+#pragma mark - 播放器代理
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    NSLog(@"播放完成");
+}
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError * __nullable)error
+{
+    NSLog(@"error=%@",error);
 }
 
 #pragma mark ---Datasource

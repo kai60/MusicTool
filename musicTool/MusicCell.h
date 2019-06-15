@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol MusicDelegate <NSObject>
 
 -(void)loadMoreMusic;
--(void)downLoadWithSong:(NSDictionary*)song;
+-(void)downLoadWithSong:(NSDictionary*)song cell:(_Nullable id)cell;
 -(void)checkWithSong:(NSDictionary*)song state:(BOOL)checked;
--(void)playWithSong:(NSDictionary*)song;
+-(void)playWithSong:(NSDictionary*)song cell:(id)cell;
 
 @end
 @interface MusicCell : NSTableCellView
@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak) IBOutlet NSButton *checkBox;
 @property (strong,nonatomic)  NSDictionary *song;
+@property (assign,nonatomic)  BOOL isPlaying;
 @property(nonatomic,strong)id<MusicDelegate> delegate;
 -(void)configWithSong:(NSDictionary*)dic Selected:(BOOL)select;
 

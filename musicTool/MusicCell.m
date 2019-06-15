@@ -22,7 +22,7 @@
     NSString*lrc=dic[@"lrc"];
      NSString*url=dic[@"url"];
      NSString*pic=dic[@"pic"];
-    self.title.stringValue=[NSString stringWithFormat:@"%@-%@",author,title];
+    self.title.stringValue=[NSString stringWithFormat:@"%@_%@",author,title];
    
     [self.icon setImageURL:[NSURL URLWithString:pic]];
     if (select)
@@ -52,6 +52,19 @@
         self.downloadButton.hidden=YES;
         self.loadMore.hidden=NO;
     }
+     NSString* directory = [NSHomeDirectory() stringByAppendingPathComponent:@"Downloads"];
+    NSString *mp3 = [NSString stringWithFormat:@"%@_%@.mp3",author,title];
+    NSString*mp3Path=[directory stringByAppendingPathComponent:mp3];
+    BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
+    if (isexsites)
+    {
+        
+        self.downloadButton.image=[NSImage imageNamed:@"show.png"];
+    }
+    else
+    {
+        self.downloadButton.image=[NSImage imageNamed:@"download.png"];
+    }
    
     
     
@@ -63,15 +76,15 @@
     }
 }
 - (IBAction)download:(NSButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(downLoadWithSong:)])
+    if ([self.delegate respondsToSelector:@selector(downLoadWithSong:cell:)])
     {
-        [self.delegate downLoadWithSong:self.song];
+        [self.delegate downLoadWithSong:self.song cell:self];
     }
 }
 - (IBAction)play:(NSButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(playWithSong:)])
+    if ([self.delegate respondsToSelector:@selector(playWithSong:cell:)])
     {
-        [self.delegate playWithSong:self.song];
+        [self.delegate playWithSong:self.song cell:self];
     }
 }
 - (IBAction)loadMore:(NSTextField *)sender {

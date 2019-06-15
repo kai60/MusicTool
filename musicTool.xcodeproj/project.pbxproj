@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A054D2522B4EDA300996799 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A054D2422B4EDA300996799 /* stop.png */; };
+		2A5A398122B3C2CB00F45FF2 /* show.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A5A398022B3C2CB00F45FF2 /* show.png */; };
 		2AE4A4DA2292D24D0079D834 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4D92292D24D0079D834 /* AppDelegate.m */; };
 		2AE4A4DD2292D24D0079D834 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4DC2292D24D0079D834 /* ViewController.m */; };
 		2AE4A4DF2292D24E0079D834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE4A4DE2292D24E0079D834 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A054D2422B4EDA300996799 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = ../../../../../Downloads/stop.png; sourceTree = "<group>"; };
+		2A5A398022B3C2CB00F45FF2 /* show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show.png; sourceTree = "<group>"; };
 		2AE4A4D52292D24D0079D834 /* musicTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE4A4D82292D24D0079D834 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2AE4A4D92292D24D0079D834 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 		C01C9D7C22B22DA800F45584 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2A054D2422B4EDA300996799 /* stop.png */,
+				2A5A398022B3C2CB00F45FF2 /* show.png */,
 				C0868A7922B387BA0030390B /* more.png */,
 				C01C9D7D22B22DA800F45584 /* stop.png */,
 				C01C9D7E22B22DA800F45584 /* download.png */,
@@ -256,8 +262,10 @@
 			files = (
 				2AE4A4DF2292D24E0079D834 /* Assets.xcassets in Resources */,
 				2AE4A4E22292D24E0079D834 /* Main.storyboard in Resources */,
+				2A054D2522B4EDA300996799 /* stop.png in Resources */,
 				C01C9D8122B22DA800F45584 /* stop.png in Resources */,
 				C01C9D8322B22DA800F45584 /* showinFinder.png in Resources */,
+				2A5A398122B3C2CB00F45FF2 /* show.png in Resources */,
 				C01C9D8222B22DA800F45584 /* download.png in Resources */,
 				C0868A7A22B387BA0030390B /* more.png in Resources */,
 				C01C9D8422B22DA800F45584 /* play.png in Resources */,
@@ -421,7 +429,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = U2S5D5ZDYA;
+				DEVELOPMENT_TEAM = 5B36ATDCUA;
 				INFOPLIST_FILE = musicTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,7 +449,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = U2S5D5ZDYA;
+				DEVELOPMENT_TEAM = 5B36ATDCUA;
 				INFOPLIST_FILE = musicTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
