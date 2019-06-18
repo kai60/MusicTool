@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A054D2522B4EDA300996799 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A054D2422B4EDA300996799 /* stop.png */; };
 		2A5A398122B3C2CB00F45FF2 /* show.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A5A398022B3C2CB00F45FF2 /* show.png */; };
 		2AE4A4DA2292D24D0079D834 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4D92292D24D0079D834 /* AppDelegate.m */; };
 		2AE4A4DD2292D24D0079D834 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE4A4DC2292D24D0079D834 /* ViewController.m */; };
@@ -25,15 +24,14 @@
 		C01C9D6F22B0FD5F00F45584 /* OTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */; };
 		C01C9D7022B0FD5F00F45584 /* OTWebImageDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */; };
 		C01C9D7122B0FD5F00F45584 /* NSImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */; };
-		C01C9D8122B22DA800F45584 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7D22B22DA800F45584 /* stop.png */; };
 		C01C9D8222B22DA800F45584 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7E22B22DA800F45584 /* download.png */; };
 		C01C9D8322B22DA800F45584 /* showinFinder.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D7F22B22DA800F45584 /* showinFinder.png */; };
 		C01C9D8422B22DA800F45584 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C9D8022B22DA800F45584 /* play.png */; };
 		C0868A7A22B387BA0030390B /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = C0868A7922B387BA0030390B /* more.png */; };
+		C0868A7F22B8C7280030390B /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C0868A7E22B8C7280030390B /* stop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A054D2422B4EDA300996799 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop.png; path = ../../../../../Downloads/stop.png; sourceTree = "<group>"; };
 		2A5A398022B3C2CB00F45FF2 /* show.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = show.png; sourceTree = "<group>"; };
 		2AE4A4D52292D24D0079D834 /* musicTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE4A4D82292D24D0079D834 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,11 +67,11 @@
 		C01C9D6B22B0FD5E00F45584 /* OTHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTHTTPRequest.m; sourceTree = "<group>"; };
 		C01C9D6C22B0FD5E00F45584 /* OTWebImageDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTWebImageDownloadRequest.m; sourceTree = "<group>"; };
 		C01C9D6D22B0FD5E00F45584 /* NSImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+WebCache.m"; sourceTree = "<group>"; };
-		C01C9D7D22B22DA800F45584 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		C01C9D7E22B22DA800F45584 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		C01C9D7F22B22DA800F45584 /* showinFinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showinFinder.png; sourceTree = "<group>"; };
 		C01C9D8022B22DA800F45584 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		C0868A7922B387BA0030390B /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		C0868A7E22B8C7280030390B /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +185,9 @@
 		C01C9D7C22B22DA800F45584 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2A054D2422B4EDA300996799 /* stop.png */,
+				C0868A7E22B8C7280030390B /* stop.png */,
 				2A5A398022B3C2CB00F45FF2 /* show.png */,
 				C0868A7922B387BA0030390B /* more.png */,
-				C01C9D7D22B22DA800F45584 /* stop.png */,
 				C01C9D7E22B22DA800F45584 /* download.png */,
 				C01C9D7F22B22DA800F45584 /* showinFinder.png */,
 				C01C9D8022B22DA800F45584 /* play.png */,
@@ -261,9 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE4A4DF2292D24E0079D834 /* Assets.xcassets in Resources */,
+				C0868A7F22B8C7280030390B /* stop.png in Resources */,
 				2AE4A4E22292D24E0079D834 /* Main.storyboard in Resources */,
-				2A054D2522B4EDA300996799 /* stop.png in Resources */,
-				C01C9D8122B22DA800F45584 /* stop.png in Resources */,
 				C01C9D8322B22DA800F45584 /* showinFinder.png in Resources */,
 				2A5A398122B3C2CB00F45FF2 /* show.png in Resources */,
 				C01C9D8222B22DA800F45584 /* download.png in Resources */,

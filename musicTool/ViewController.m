@@ -21,6 +21,7 @@
 @property(nonatomic,strong)AVAudioPlayer* audioPlayer;
 @property(nonatomic,strong)AVPlayer* avPlayer;
 @property(nonatomic,strong)MusicCell* currentCell;
+@property(nonatomic,strong)id monitor;
 
 @end
 @implementation ViewController
@@ -43,6 +44,16 @@
     
     cancel.action=@selector(cancelClicked:);
     search.action=@selector(searchClicked:);
+    id monitor=[NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * _Nonnull event) {
+        
+        
+        if (event.keyCode==36)
+        {
+            [self searchClicked:self.searchBar];
+        }
+        return event;
+    }];
+    self.monitor=monitor;
     
 }
 -(void)viewDidAppear
@@ -63,6 +74,7 @@
     self.manager=[AFHTTPSessionManager manager];
     self.manager.requestSerializer=[AFHTTPRequestSerializer serializer];
     self.manager.responseSerializer =  [AFHTTPResponseSerializer serializer];
+    
     
 }
 - (void)setRepresentedObject:(id)representedObject {
@@ -116,8 +128,10 @@
 }
 - (IBAction)downLoad:(NSButtonCell *)sender {
     
-    for (NSDictionary*song in self.downLoadArray)
+    
+    for (NSInteger i=0; i<self.downLoadArray.count; i++)
     {
+        NSDictionary*song=self.downLoadArray[i];
         [self downLoadWithSong:song cell:nil];
     }
 }
@@ -157,27 +171,12 @@
 }
 - (void)cancelClicked:(NSSearchField *)sender {
     
-    
+    sender.stringValue=@"";
+    [self.dataArray removeAllObjects];
+    [self.tableView reloadData];
 }
 
--(BOOL)acceptsFirstResponder
-{
-    return YES;
-}
-- (void)keyDown:(NSEvent *)event
-{
-    [self interpretKeyEvents:@[event]];
-}
--(void)doCommandBySelector:(SEL)selector
-{
-    [super doCommandBySelector:selector];
-   
-    
-}
--(void)insertNewline:(id)sender
-{
-    [self searchClicked:self.searchBar];
-}
+
 #pragma mark ---Music
 -(void)loadMoreMusic
 {
@@ -198,7 +197,7 @@
     NSString *mp3 = [NSString stringWithFormat:@"%@_%@.mp3",song[@"author"],song[@"title"]];
     NSString*mp3Path=[directory stringByAppendingPathComponent:mp3];
     NSString*lrcPath=[directory stringByAppendingPathComponent:lrc];
-   
+    NSInteger index= [self.dataArray indexOfObject:song];
      BOOL isexsites=[[NSFileManager defaultManager] fileExistsAtPath:mp3Path];
     if (isexsites&&cell)
     {
@@ -206,15 +205,44 @@
     }
     else if (isexsites)
     {
-        
+        [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
     }
     else
     {
+        
+        MusicCell*currentCell ;
+        if (cell)
+        {
+            currentCell=cell;
+        }
+     else if(index!=NSNotFound)
+        {
+            currentCell =(MusicCell*)[self.tableView viewAtColumn:0 row:index makeIfNecessary:YES];
+        }
+      
+       
+     
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
         
         
         NSURLSessionDownloadTask *download = [self.manager   downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
             //下载进度
+            dispatch_async(dispatch_get_main_queue(), ^{
+               
+                if (currentCell&&downloadProgress.fractionCompleted<1.0)
+                {
+                    [currentCell.progress startAnimation:self];
+                    currentCell.progress.hidden=NO;
+                    
+                    currentCell.progress.doubleValue=downloadProgress.fractionCompleted*100;
+                }
+                else
+                {
+                     [currentCell.progress stopAnimation:self];
+                    currentCell.progress.hidden=YES;
+                }
+            });
+           
             
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
@@ -251,7 +279,7 @@
                 
                 
                 
-                NSInteger index= [self.dataArray indexOfObject:song];
+               
                 [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:index] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
                 
             }
@@ -361,7 +389,10 @@
     
 }
 
-
+- (void)dealloc
+{
+    [NSEvent removeMonitor:self.monitor];
+}
 
 #pragma mark - 播放器代理
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

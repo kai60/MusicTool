@@ -684,7 +684,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="来一首" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="来一首" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -995,32 +995,23 @@
                                                             <rect key="frame" x="1" y="1" width="803" height="80"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-i2-sAw" userLabel="icon">
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLI-i2-sAw" userLabel="icon">
                                                                     <rect key="frame" x="30" y="10" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="DWw-Nx-SMU"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="Gs4-H3-W2C"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAddTemplate" id="Gsd-re-WVX"/>
                                                                 </imageView>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-vt-M9w" userLabel="title">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-vt-M9w" userLabel="title">
                                                                     <rect key="frame" x="208" y="30" width="190" height="21"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="Qwb-kC-5jv"/>
-                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UWx-fZ-hG8"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="此流程主要用于进行客户的需求" id="cQz-A8-hkF" userLabel="title">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-yQ-4eb" userLabel="playButton">
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-yQ-4eb" userLabel="playButton">
                                                                     <rect key="frame" x="130" y="25" width="30" height="30"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="30" id="5Qs-WJ-Lvf"/>
-                                                                        <constraint firstAttribute="width" constant="30" id="tKk-Rz-kXF"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play" imagePosition="only" alignment="center" borderStyle="border" transparent="YES" inset="2" id="NdP-yR-VYp">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
@@ -1032,8 +1023,8 @@
                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="bOa-Br-hE4" userLabel="downloadButton">
                                                                     <rect key="frame" x="743" y="25" width="30" height="30"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="30" id="3pH-31-oNU"/>
-                                                                        <constraint firstAttribute="width" constant="30" id="Vfy-2h-WkJ"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="ISE-ux-gJj"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="J7Z-f4-GoT"/>
                                                                     </constraints>
                                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="download" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k4C-Ec-nXp">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1043,12 +1034,9 @@
                                                                         <action selector="download:" target="BF8-IP-4MA" id="Vid-HE-OrN"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-ir-FWQ">
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-ir-FWQ">
                                                                     <rect key="frame" x="3" y="31" width="22" height="18"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="14" id="ZXK-IK-BsM"/>
-                                                                        <constraint firstAttribute="width" constant="18" id="hk5-hB-lZP"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="fzv-eC-gsT">
                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                         <font key="font" metaFont="system"/>
@@ -1057,12 +1045,9 @@
                                                                         <action selector="checked:" target="BF8-IP-4MA" id="Q8t-9Q-G5o"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="cb8-ua-L84" userLabel="LoadMore">
+                                                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cb8-ua-L84" userLabel="LoadMore">
                                                                     <rect key="frame" x="352" y="5" width="100" height="70"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="70" id="NcW-4v-voN"/>
-                                                                        <constraint firstAttribute="width" constant="100" id="T46-uH-SV2"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <buttonCell key="cell" type="roundRect" title="加载更多" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="nM4-yz-mNa">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system" size="18"/>
@@ -1072,21 +1057,19 @@
                                                                         <action selector="loadMore:" target="BF8-IP-4MA" id="pYB-Ot-4ra"/>
                                                                     </connections>
                                                                 </button>
+                                                                <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="778-xc-mry">
+                                                                    <rect key="frame" x="635" y="30" width="100" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="1qZ-Nl-6ac"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="kp4-WT-zWH"/>
+                                                                    </constraints>
+                                                                </progressIndicator>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="cb8-ua-L84" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="1R1-Va-gBs"/>
-                                                                <constraint firstItem="fLI-i2-sAw" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="2vO-se-ISX"/>
-                                                                <constraint firstItem="MMQ-ir-FWQ" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="CGv-kf-YL8"/>
-                                                                <constraint firstAttribute="trailing" secondItem="bOa-Br-hE4" secondAttribute="trailing" constant="30" id="EPE-Ur-rn5"/>
-                                                                <constraint firstItem="bOa-Br-hE4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y0a-vt-M9w" secondAttribute="trailing" constant="8" symbolic="YES" id="JYF-Xo-36T"/>
-                                                                <constraint firstItem="MMQ-ir-FWQ" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="5" id="Kk1-jW-VPY"/>
-                                                                <constraint firstItem="y0a-vt-M9w" firstAttribute="leading" secondItem="o3R-yQ-4eb" secondAttribute="trailing" constant="50" id="TLI-ia-tUB"/>
-                                                                <constraint firstItem="o3R-yQ-4eb" firstAttribute="leading" secondItem="fLI-i2-sAw" secondAttribute="leading" constant="100" id="Ur0-ff-TZs"/>
-                                                                <constraint firstItem="o3R-yQ-4eb" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="Xuj-Co-df6"/>
-                                                                <constraint firstItem="bOa-Br-hE4" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="ey5-o6-8gf"/>
-                                                                <constraint firstItem="fLI-i2-sAw" firstAttribute="leading" secondItem="BF8-IP-4MA" secondAttribute="leading" constant="30" id="fmT-RW-w8M"/>
-                                                                <constraint firstItem="y0a-vt-M9w" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="h7S-a2-Uhb"/>
-                                                                <constraint firstItem="cb8-ua-L84" firstAttribute="centerX" secondItem="BF8-IP-4MA" secondAttribute="centerX" id="jML-1E-Qwe"/>
+                                                                <constraint firstItem="bOa-Br-hE4" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="29M-CO-XSS"/>
+                                                                <constraint firstItem="bOa-Br-hE4" firstAttribute="leading" secondItem="778-xc-mry" secondAttribute="trailing" constant="8" id="IHF-td-dHH"/>
+                                                                <constraint firstItem="778-xc-mry" firstAttribute="centerY" secondItem="BF8-IP-4MA" secondAttribute="centerY" id="h84-Zs-6Zs"/>
+                                                                <constraint firstAttribute="trailing" secondItem="bOa-Br-hE4" secondAttribute="trailing" constant="30" id="xhW-hu-5bl"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="checkBox" destination="MMQ-ir-FWQ" id="qrw-09-i5f"/>
@@ -1094,6 +1077,7 @@
                                                                 <outlet property="icon" destination="fLI-i2-sAw" id="pnn-EG-zyb"/>
                                                                 <outlet property="loadMore" destination="cb8-ua-L84" id="hdH-PA-5YG"/>
                                                                 <outlet property="playButton" destination="o3R-yQ-4eb" id="xjH-sQ-CQN"/>
+                                                                <outlet property="progress" destination="778-xc-mry" id="MhV-Rt-lAk"/>
                                                                 <outlet property="title" destination="y0a-vt-M9w" id="LSL-kl-cJv"/>
                                                             </connections>
                                                         </tableCellView>

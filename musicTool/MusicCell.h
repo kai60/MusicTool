@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic)  NSDictionary *song;
 @property (assign,nonatomic)  BOOL isPlaying;
 @property(nonatomic,strong)id<MusicDelegate> delegate;
+@property (weak) IBOutlet NSProgressIndicator *progress;
 -(void)configWithSong:(NSDictionary*)dic Selected:(BOOL)select;
 
 @end
